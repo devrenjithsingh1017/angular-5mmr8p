@@ -4,10 +4,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { GridModule } from '@progress/kendo-angular-grid';
 import { AppComponent } from './app.component';
+import { BooleanfilterComponent } from './booleanfilter/booleanfilter.component';
 
 @NgModule({
-    bootstrap: [AppComponent],
-    declarations: [AppComponent],
-    imports: [BrowserModule, BrowserAnimationsModule, GridModule]
+  bootstrap: [AppComponent],
+  declarations: [AppComponent, BooleanfilterComponent],
+  imports: [BrowserModule, BrowserAnimationsModule, GridModule],
 })
 export class AppModule {}

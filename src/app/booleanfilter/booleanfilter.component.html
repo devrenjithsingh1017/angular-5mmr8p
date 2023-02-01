@@ -1,0 +1,19 @@
+<input
+  type="radio"
+  id="{{ field }}-filter"
+  name="{{ field }}"
+  value="true"
+  (input)="inputValuechange(true)"
+  [checked]="filterValue == true ? 'checked' : null"
+/>
+<label for="{{ field }}-filter">{{ yesFilterMessage }}</label>
+
+<input
+  type="radio"
+  id="{{ field }}-filter"
+  name="{{ field }}"
+  value="false"
+  (input)="inputValuechange(false)"
+  [checked]="filterValue == false ? 'checked' : null"
+/>
+<label for="{{ field }}-filter">{{ noFilterMessage }}</label>

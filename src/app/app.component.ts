@@ -33,20 +33,21 @@ import { sampleProducts } from './products';
             [headerClass]="'headerCustomClass'"
             title="Status"
             field="isActive"
-           
+            filter="boolean"
         >
-        <ng-template kendoGridFilterMenuTemplate let-filter let-column="column" let-filterService="filterService">
-        <kendo-grid-boolean-filter-menu
-            [column]="column"
-            [filter]="filter"
-            [filterService]="filterService"
-            >
-            <kendo-grid-messages filterIsTrue="Active" filterIsFalse="InActive"> </kendo-grid-messages>
-        </kendo-grid-boolean-filter-menu>
-      </ng-template
+        <ng-template kendoGridFilterMenuTemplate
+        let-column="column"
+        let-filter="filter"
+        let-filterService="filterService"
+        >
+        <app-booleanfilter  field="{{column.field}}" [currentFilter]="filter" [filterService]="filterService"
+        yesFilterMessage="Active" noFilterMessage="InActive"></app-booleanfilter>
+    </ng-template>
 
         </kendo-grid-column>
         </kendo-grid>
+
+     
     `,
 })
 export class AppComponent {
