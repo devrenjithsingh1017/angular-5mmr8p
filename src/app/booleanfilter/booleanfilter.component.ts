@@ -23,6 +23,7 @@ export class BooleanfilterComponent implements OnInit {
     if (currentFilterValue) {
       this.filterValue = currentFilterValue.value;
     }
+    console.log(this.field);
   }
   inputValuechange(val) {
     this.filterValue = val;

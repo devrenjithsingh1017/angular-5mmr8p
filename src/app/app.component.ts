@@ -32,7 +32,7 @@ import { sampleProducts } from './products';
         <kendo-grid-column
             [headerClass]="'headerCustomClass'"
             title="Status"
-            field="isActive"
+            field="Discontinued"
             filter="boolean"
         >
         <ng-template kendoGridFilterMenuTemplate
