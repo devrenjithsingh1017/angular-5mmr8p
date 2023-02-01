@@ -23,17 +23,18 @@ import { sampleProducts } from './products';
             <kendo-grid-column
             [headerClass]="'headerCustomClass'"
             title="B2B Onboarded"
-            field="isB2BEnabled"
+            field="removed"
             filter="boolean"
         >
         <kendo-grid-messages filterIsTrue="Yes" filterIsFalse="No"> </kendo-grid-messages>
-
+        <ng-template kendoGridCellTemplate let-dataItem>
+        {{dataItem.removed == true ? "Yes" : "No"}}
+    </ng-template>
         </kendo-grid-column>
         <kendo-grid-column
             [headerClass]="'headerCustomClass'"
             title="Status"
             field="Discontinued"
-            filter="boolean"
         >
         <ng-template kendoGridFilterMenuTemplate
         let-column="column"
