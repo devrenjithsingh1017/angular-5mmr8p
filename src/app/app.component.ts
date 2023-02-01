@@ -27,7 +27,7 @@ import { sampleProducts } from './products';
             filter="boolean"
         >
         <kendo-grid-messages filterIsTrue="Yes" filterIsFalse="No"> </kendo-grid-messages>
-         
+
         </kendo-grid-column>
         <kendo-grid-column
             [headerClass]="'headerCustomClass'"
@@ -43,6 +43,9 @@ import { sampleProducts } from './products';
         <app-booleanfilter  field="{{column.field}}" [currentFilter]="filter" [filterService]="filterService"
         yesFilterMessage="Active" noFilterMessage="InActive"></app-booleanfilter>
     </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+    {{dataItem.Discontinued == true ? "Active" : "InActive"}}
+</ng-template>
 
         </kendo-grid-column>
         </kendo-grid>
